@@ -13,7 +13,7 @@
 + At subsequent stages, additional DNN regressors are trained to predict a displacement of the joint locations from previous stage to the true location. 
 + Thus, each subsequent stage can be thought of as a refinement of the currently predicted pose, as shown in Fig. 2
 
-网上找的源码是基于Chainer实现的，这里简介一下Chainer
+网上找的源码是基于Chainer实现的(https://github.com/mitmul/deeppose)，这里简介一下Chainer
 
 + Chainer诞生于2015年，于2016年转向开源正式进入公众视野，尽管其GitHub代码库非常活跃，但却并没能引起业界的应有重视。可这并不影响该框架的性能，英特尔公司就决定将Chainer作为一种理想的AI工作负载开发途径，并以此为基础促进自家芯片的市场需求量。而且该框架在日本也被广泛使用，
 
