@@ -22,8 +22,20 @@ https://nanonets.com/blog/human-pose-estimation-2d-guide/
 + 完全可定制,由于Chainer底层代码也是Python，所有类别和方法都可以适应最新的版本或专业方法
 + 广泛而深入的支持,Chainer积极地用于当前神经网络（CNN，RNN，RL等）的大多数方法，积极地在开发时添加新方法，并为多种硬件提供支持以及提供多GPU的并行化
 
+还没有整明白的问题：
+
 #### 2015 - Efficient Object Localization Using Convolutional Networks(用heat-map代替regression)
 
 1. 文中采用了SpatialDropout方法，具体理解参考下面的文章
 + https://blog.csdn.net/weixin_43896398/article/details/84762943
 + 普通的dropout会随机地将部分元素置零，而SpatialDropout会随机地将部分区域置零，该dropout方法在图像识别领域实践证明是有效的
+2. 粗热度图回归 + 细热度图回归
++ 粗热度图回归输入图像金字塔，过7层卷积融合再过3个(spatial-dropout + 1 * 1 relu)得到所有关节点的热度图
++ 细热度图回归
+
+![Image of Yaktocat](https://github.com/Malvtrics/Papers/blob/master/Object%20Detection/coarse%20heat-map%20regression%20model.png)
+
+还没有整明白的问题：3.3中提到用MRF空间模型选出正确的人是怎么做到的？
+The MRF inference step will learn to attenuate the joint activations from people for which the ground-truth torso is not anatomically viable, thus “selecting” the correct person for labeling
+
+
