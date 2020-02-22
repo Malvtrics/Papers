@@ -24,4 +24,6 @@ https://nanonets.com/blog/human-pose-estimation-2d-guide/
 
 #### 2015 - Efficient Object Localization Using Convolutional Networks(用heat-map代替regression)
 
-
+1. 文中采用了SpatialDropout方法，具体理解参考下面的文章
++ https://blog.csdn.net/weixin_43896398/article/details/84762943
++ 普通的dropout会随机地将部分元素置零，而SpatialDropout会随机地将部分区域置零，该dropout方法在图像识别领域实践证明是有效的
