@@ -1,5 +1,7 @@
 ### Papers mainly for object detection task
 
+https://nanonets.com/blog/human-pose-estimation-2d-guide/
+
 #### 2014-DeepPose: Human Pose Estimation via Deep Neural Networks：(第一次用DNN解决pose estimation)
 
 论文重点
