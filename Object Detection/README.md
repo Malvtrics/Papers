@@ -41,7 +41,9 @@ https://zhuanlan.zhihu.com/p/35040994
 ![3](https://github.com/Malvtrics/Papers/blob/master/Object%20Detection/Siamese%20network.png)
 ![4](https://github.com/Malvtrics/Papers/blob/master/Object%20Detection/fine%20heat-map%20network%20for%20a%20single%20joint.png)
 
-还没有整明白的问题：3.3中提到用MRF空间模型选出正确的人是怎么做到的？
+4. 训练的时候先训练粗回归，参数稳定后再训练细回归，(loss = 粗回归loss + lambda * 细回归loss) (论文中lambda=0.1)
+
+5. 还没有整明白的问题：3.3中提到用MRF空间模型选出正确的人是怎么做到的？
 The MRF inference step will learn to attenuate the joint activations from people for which the ground-truth torso is not anatomically viable, thus “selecting” the correct person for labeling
 
 
