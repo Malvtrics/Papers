@@ -31,10 +31,15 @@ https://nanonets.com/blog/human-pose-estimation-2d-guide/
 + 普通的dropout会随机地将部分元素置零，而SpatialDropout会随机地将部分区域置零，该dropout方法在图像识别领域实践证明是有效的
 2. 粗热度图回归 + 细热度图回归
 + 粗热度图回归输入图像金字塔，过7层卷积融合再过3个(spatial-dropout + 1 * 1 relu)得到所有关节点的热度图
-+ 细热度图回归
++ 细热度图回归有点复杂，详细参考下面第二张图吧，第一张图是粗热度图回归的
 
 ![1](https://github.com/Malvtrics/Papers/blob/master/Object%20Detection/coarse%20heat-map%20regression%20model.png)
 ![2](https://github.com/Malvtrics/Papers/blob/master/Object%20Detection/plus%20fine%20heat-map%20regression%20model.png)
+
+3. 里面用到了孪生神经网络，通过下面知乎一个很形象的文章了解一下,还有在论文中的实现
+https://zhuanlan.zhihu.com/p/35040994
+![3](https://github.com/Malvtrics/Papers/blob/master/Object%20Detection/Siamese%20network.png)
+![4](https://github.com/Malvtrics/Papers/blob/master/Object%20Detection/fine%20heat-map%20network%20for%20a%20single%20joint.png)
 
 还没有整明白的问题：3.3中提到用MRF空间模型选出正确的人是怎么做到的？
 The MRF inference step will learn to attenuate the joint activations from people for which the ground-truth torso is not anatomically viable, thus “selecting” the correct person for labeling
