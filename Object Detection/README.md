@@ -46,12 +46,17 @@ https://zhuanlan.zhihu.com/p/35040994
 5. 还没有整明白的问题：3.3中提到用MRF空间模型选出正确的人是怎么做到的？
 The MRF inference step will learn to attenuate the joint activations from people for which the ground-truth torso is not anatomically viable, thus “selecting” the correct person for labeling
 
-#### 2016 - Convolutional Pose Machines
+#### 2016 - Convolutional Pose Machines(用一个序列框架不断迭代提高置信度)
 
 + 主要是理解什么是CPM 要理解CPM 就要理解什么是PM ，CPM 就是把PM里面的DNN 换成了CNN, 简书上有个文章感觉还不错：
 + https://www.jianshu.com/p/fed0005c2f11  收录在自己的简书中以方便查看
 + 简单理解就是： 包含了多个卷积网络的序列框架，该架构使得网络能够直接用上一阶段网络输出的置信图来进一步精确预测每一个关键点的位置
 
-#### 2017 - Efficient Object Localization Using Convolutional Networks(用heat-map代替regression)
+#### 2016 - Human Pose Estimation with Iterative Error Feedback (利用自顶向下的反馈机制循环纠错)
+
++ 直接看论文就行，这个理念还是比较好理解的,能够同时学到关节的输入和输出特征
++ 比较好奇的是里面的function G是如何实现的？？ 可能要去扒一下code
+  + Function g converts each 2D keypoint position into one Gaussian heatmap channel.
+
 #### 2018 - Efficient Object Localization Using Convolutional Networks(用heat-map代替regression)
 #### 2019 - Efficient Object Localization Using Convolutional Networks(用heat-map代替regression)
