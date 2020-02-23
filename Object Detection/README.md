@@ -60,7 +60,12 @@ The MRF inference step will learn to attenuate the joint activations from people
 
 #### 2016 - Stacked Hourglass Networks for Human Pose Estimation (漏斗网络)
 
-
++ 这篇论文还是很精髓的，是今天看的最好的论文，中间总结了前人的牛逼经验然后提出了自己的牛逼之处
++ source code是用lua写的，核心的地方是layers中的reslayer的构造，位置如下 
++ https://github.com/princeton-vl/pose-hg-train/blob/master/src/models/layers/Residual.lua
++ 结合知乎上这个链接一起理解 https://zhuanlan.zhihu.com/p/31171951
++ 也可以参考CSDN上这个代码详解，最后还有一点实战后对参数的说明，不错
++ 需要反复品网络结构的妙处，主要是用了残差网络设计和中间监督的设计
 
 #### 2018 - Simple Baselines for Human Pose Estimation and Tracking
 
