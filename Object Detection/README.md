@@ -58,5 +58,15 @@ The MRF inference step will learn to attenuate the joint activations from people
 + 比较好奇的是里面的function G是如何实现的？？ 可能要去扒一下code
   + Function g converts each 2D keypoint position into one Gaussian heatmap channel.
 
-#### 2018 - Efficient Object Localization Using Convolutional Networks(用heat-map代替regression)
-#### 2019 - Efficient Object Localization Using Convolutional Networks(用heat-map代替regression)
+#### 2016 - Stacked Hourglass Networks for Human Pose Estimation (漏斗网络)
+
+
+
+#### 2018 - Simple Baselines for Human Pose Estimation and Tracking
+
+
+
+#### 2019 - Deep High-Resolution Representation Learning for Human Pose Estimation
+
+
+
