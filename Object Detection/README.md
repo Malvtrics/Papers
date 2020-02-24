@@ -77,6 +77,7 @@ The MRF inference step will learn to attenuate the joint activations from people
 + 这个光流法在论文中的使用：Object Keypoint Similarity (OKS)代替检测框的IOU来计算相似度。这是因为当人的动作比较快时，用IOU可能并不合理。
 可以理解为一种新的相似度计算方式：具体是使用光流法计算某一帧的关键点会出现在的另外一帧的位置，然后用这个计算出来的位置和这一帧检测出来的关键点之间计算OKS,以此作为两帧之间的不同人的相似度值
 + 翻了一遍代码也不知道这个optical flow在哪里实现的，MD
++ 对optical感兴趣的同学可以去翻阅这里一篇optical_flow的论文
 
 #### 2019 - Deep High-Resolution Representation Learning for Human Pose Estimation
 
