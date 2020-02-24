@@ -70,7 +70,13 @@ The MRF inference step will learn to attenuate the joint activations from people
 
 #### 2018 - Simple Baselines for Human Pose Estimation and Tracking
 
-
++ 也不知道啥时候就进入了多人检测模式，看下面这个CSDN的文章吧
++ https://blog.csdn.net/Fire_Light_/article/details/85306668
++ 使用MaskRcnn来进行人的检测，在视频第一帧中每个检测到的人给一个id，然后之后的每一帧检测到的人都和上一帧检测到的人通过某种度量方式（文中提到的是计算检测框的IOU）算一个相似度，将相似度大的作为同一个id,没有匹配到的分配一个新的id
++ optical flow: 光流法实际是通过检测图像像素点的强度随时间的变化进而推断出物体移动速度及方向的方法
++ 这个光流法在论文中的使用：Object Keypoint Similarity (OKS)代替检测框的IOU来计算相似度。这是因为当人的动作比较快时，用IOU可能并不合理。
+可以理解为一种新的相似度计算方式：具体是使用光流法计算某一帧的关键点会出现在的另外一帧的位置，然后用这个计算出来的位置和这一帧检测出来的关键点之间计算OKS,以此作为两帧之间的不同人的相似度值
++ 翻了一遍代码也不知道这个optical flow在哪里实现的，MD
 
 #### 2019 - Deep High-Resolution Representation Learning for Human Pose Estimation
 
