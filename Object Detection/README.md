@@ -82,5 +82,5 @@ The MRF inference step will learn to attenuate the joint activations from people
 
 #### 2019 - Deep High-Resolution Representation Learning for Human Pose Estimation
 
-
+见本目录DHR-HPE.md文件
 
