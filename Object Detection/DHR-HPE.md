@@ -9,7 +9,7 @@
 ### 摘要
 + 本论文主要聚焦学习HR表征，很多现存方法通过HR->LR的网络的LR表征恢复HR表征，而我们在整体网络中持续HR表征
 + 我们从一个HR子网络开始，逐渐添加HR->LR子网络，子网络之间并行互联，通过这样的不同量纲信息融合得到HR表征(multi-scale fusion)
-+　在COCO/MPII/PoseTrack上都取得好的效果
++ 在COCO/MPII/PoseTrack上都取得好的效果
 
 ### 简介和相关工作
 + 本文主要讨论单人姿态估计
@@ -24,3 +24,4 @@
 
 vice versa 反之亦然
 for bettering modeling the unary and pair-wise energies 
+a.k.a. ->  also known as 
