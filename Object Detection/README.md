@@ -68,6 +68,15 @@ The MRF inference step will learn to attenuate the joint activations from people
 + 中间监督简单理解就是在某一个地方算loss,最后的loss是网络中所有(中间监督位置)loss的总和，这个也是为了防止梯度消失
 + 需要反复品网络结构的妙处，主要是用了残差网络设计和中间监督的设计
 
+#### 2017 - Realtime Multi-Person 2D Pose Estimation using Part Affinity Fields(多人检测)
+
++ 首先理解一下自顶向下的方法是先找人再找关节，但是找人这事儿挺费劲，所以换思路，先找关节再匹配人
++ 这里有两个子网络，一个是用CNN找出所有的关节的热度图，另外一个是论文题目中的PAF
++ 注意在train阶段拿到的是上面一句话中的热度图和PAF的ground truth(没有关联关节的像素点PAF为0)'
++ 在test阶段才做part和part之间的匹配
++ 详细的代码解读请参考下面这个论文，比较详细
++ https://blog.csdn.net/l297969586/article/details/80346254
+
 #### 2018 - Simple Baselines for Human Pose Estimation and Tracking(确实没有啥骚操作就获得了高分...)
 
 + 也不知道啥时候就进入了多人检测模式，看下面这个CSDN的文章吧,文中说代码很标准值得一看，等找时间研读一下
